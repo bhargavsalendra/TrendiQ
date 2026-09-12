@@ -1,0 +1,2 @@
+# TrendiQ
+predicting upcoming trends
