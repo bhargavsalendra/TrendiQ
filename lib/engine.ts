@@ -601,10 +601,7 @@ export function simulateTrend(trend: TrendMetrics, shocks: SimulationShocks) {
 
 export function chartSeries(trend: TrendMetrics, key: SignalKey | "overall") {
   const hist = trend.series.map((p) => {
-    const raw =
-      key === "overall"
-        ? SIGNAL_KEYS.map((k) => p[k]).filter((v): v is number => v != null)
-        : [p[key]];
+    const raw = SIGNAL_KEYS.map((k) => p[k]).filter((v): v is number => v != null);
     const value =
       key === "overall"
         ? raw.length

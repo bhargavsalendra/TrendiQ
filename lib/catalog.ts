@@ -35,7 +35,7 @@ export function featuredEmerging(trends = getTrends()) {
 }
 
 export function getCategoryAnalytics(trends = getTrends()) {
-  return [...new Set(trends.map((trend) => trend.category))]
+  return Array.from(new Set(trends.map((trend) => trend.category)))
     .map((category) => {
       const group = trends.filter((trend) => trend.category === category);
       return {

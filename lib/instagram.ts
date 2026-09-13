@@ -168,7 +168,7 @@ export type InstagramCategoryAnalytics = {
 };
 
 export function getInstagramCategoryAnalytics(trends: TrendMetrics[]): InstagramCategoryAnalytics[] {
-  const categories = [...new Set(trends.map((trend) => trend.category))];
+  const categories = Array.from(new Set(trends.map((trend) => trend.category)));
   return categories
     .map((category) => {
       const group = trends.filter((trend) => trend.category === category);
