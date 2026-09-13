@@ -22,7 +22,7 @@ export default function InstagramPage() {
           <h1 className="mt-2 font-serif text-5xl">Instagram Signals</h1>
           <p className="mt-3 max-w-2xl text-muted">
             See which aesthetics are earning attention, saves, and conversation. Instagram Momentum
-            contributes 15% of every TRENDIQ score.
+            contributes 25% of every TRENDIQ score.
           </p>
         </div>
         <span className="rounded-full border border-line bg-white px-3 py-2 text-xs text-muted">Demo feed · API-ready schema</span>
