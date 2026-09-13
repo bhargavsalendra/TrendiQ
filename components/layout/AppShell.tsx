@@ -72,7 +72,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           })}
         </nav>
         <div className="mt-8 rounded-2xl border border-lavender-200 bg-lavender-50 px-3 py-3 text-xs text-lavender-600">
-          Prototype / Demo Data
+          TRENDIQ Intelligence Data
         </div>
       </aside>
 

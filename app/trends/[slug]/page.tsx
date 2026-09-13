@@ -59,7 +59,7 @@ export default function TrendDetailPage({ params }: { params: { slug: string } }
 
       <section className="mt-8 rounded-2xl border border-line bg-white p-5 shadow-card">
         <h2 className="font-serif text-2xl">Historical Data → Forecast</h2>
-        <p className="mb-4 text-sm text-muted">Solid fill is observed prototype history. Dashed area is the 30-day linear forecast.</p>
+        <p className="mb-4 text-sm text-muted">Solid fill is observed modeled history. Dashed area is the 30-day linear forecast.</p>
         <HistoryForecastChart data={overallChart} />
       </section>
 

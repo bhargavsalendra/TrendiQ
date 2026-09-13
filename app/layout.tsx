@@ -17,7 +17,7 @@ const serif = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "TRENDIQ — Fashion Trend Intelligence",
   description:
-    "AI-powered fashion trend intelligence and early-warning platform. Prototype / demo dataset."
+    "AI-powered fashion trend intelligence and early-warning platform."
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

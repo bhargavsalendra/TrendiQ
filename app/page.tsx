@@ -2,7 +2,7 @@ import { DemoBanner } from "@/components/ui/DemoBanner";
 import { KpiCard } from "@/components/ui/KpiCard";
 import { TrendCard } from "@/components/ui/TrendCard";
 import { RadarMap } from "@/components/charts/RadarMap";
-import { featuredEmerging, getCategoryAnalytics, getKpis, getTrendImage, getTrends } from "@/lib/catalog";
+import { featuredEmerging, getCategoryAnalytics, getKpis, getTrendImage, getTrends, MENSWEAR_EDITORIAL_IMAGES } from "@/lib/catalog";
 
 export default function DashboardPage() {
   const trends = getTrends();
@@ -52,6 +52,34 @@ export default function DashboardPage() {
             <TrendCard key={trend.slug} trend={trend} />
           ))}
         </div>
+      </section>
+
+      <section className="mt-10">
+        <div className="mb-4">
+          <p className="text-xs uppercase tracking-[0.16em] text-muted">Men's image reference wall</p>
+          <h2 className="font-serif text-3xl">Materials, silhouettes, movement</h2>
+          <p className="text-sm text-muted">
+            Real editorial reference photography sourced from Unsplash. These images are visual context, not live social posts.
+          </p>
+        </div>
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
+          {MENSWEAR_EDITORIAL_IMAGES.map((item) => (
+            <figure key={item.title} className="group overflow-hidden rounded-2xl border border-line bg-white shadow-soft">
+              <div className="h-56 overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+              </div>
+              <figcaption className="p-3">
+                <p className="font-medium">{item.title}</p>
+                <p className="mt-1 text-xs text-muted">{item.detail}</p>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        <p className="mt-3 text-xs text-muted">Image source: Unsplash · Check the individual photographer license before commercial reuse.</p>
       </section>
 
       <section className="mt-10">

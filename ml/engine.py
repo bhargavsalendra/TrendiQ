@@ -1,4 +1,4 @@
-"""Prototype scoring contract for a future FastAPI + scikit-learn backend.
+"""TRENDIQ scoring contract for a future FastAPI + scikit-learn backend.
 
 The live website currently uses the TypeScript engine in lib/engine.ts so the
 demo runs without Python. Keep these weights and thresholds in sync.

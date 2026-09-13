@@ -19,7 +19,7 @@ export default function MethodologyPage() {
       <DemoBanner />
       <h1 className="font-serif text-4xl">Methodology</h1>
       <p className="mt-3 max-w-2xl text-muted">
-        TRENDIQ is a prototype intelligence layer. Today it runs a transparent scoring model on a
+        TRENDIQ is a transparent intelligence layer. Today it runs a transparent scoring model on a
         local demo dataset. The same interfaces can later call approved APIs and a Python/Scikit-learn
         backend without changing the product flow.
       </p>
@@ -44,7 +44,7 @@ export default function MethodologyPage() {
 
       <section className="mt-10 grid gap-4 md:grid-cols-2">
         <Explain title="Search Momentum" body="Measures changes in search interest over rolling 14- and 30-day windows." />
-        <Explain title="Product Growth" body="Measures changes in fashion product availability and listing breadth in the prototype catalog." />
+        <Explain title="Product Growth" body="Measures changes in fashion product availability and listing breadth in the TRENDIQ catalog." />
         <Explain title="Consumer Interest" body="Measures changes in consumer interaction intensity, independent of pure search volume." />
         <Explain title="Instagram Momentum" body="Combines Instagram post-volume growth, engagement rate, saves, and acceleration. Demo records are clearly labeled and can be replaced by an approved API adapter." />
         <Explain title="Acceleration" body="Measures whether trend growth itself is increasing by comparing recent growth to the prior window." />

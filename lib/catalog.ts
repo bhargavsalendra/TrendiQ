@@ -66,11 +66,62 @@ const TREND_IMAGES: Record<string, string> = {
   ,"mens-relaxed-denim": "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=1200&q=85"
   ,"mens-cargo-trousers": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=1200&q=85"
   ,"mens-linen-shirt": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=1200&q=85"
+  ,"old-money-prep": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=1200&q=85"
+  ,"double-denim": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1200&q=85"
+  ,"denim-on-denim": "https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=1200&q=85"
 };
 
 export function getTrendImage(slug: string) {
   return TREND_IMAGES[slug] ?? "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80";
 }
 
+export const MENSWEAR_EDITORIAL_IMAGES = [
+  {
+    title: "Washed denim layers",
+    detail: "Relaxed denim · Indigo",
+    image: "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=1000&q=85"
+  },
+  {
+    title: "Utility cargo study",
+    detail: "Modern cargo · Olive",
+    image: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=1000&q=85"
+  },
+  {
+    title: "Linen in natural light",
+    detail: "Camp shirt · European linen",
+    image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=1000&q=85"
+  },
+  {
+    title: "Soft tailoring",
+    detail: "Relaxed suiting · Charcoal",
+    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=85"
+  },
+  {
+    title: "Archive runners",
+    detail: "Retro sneakers · Mesh and suede",
+    image: "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=1000&q=85"
+  },
+  {
+    title: "Modern resort",
+    detail: "Open-collar shirt · Linen blend",
+    image: "https://images.unsplash.com/photo-1610652492500-ded49ceeb378?auto=format&fit=crop&w=1000&q=85"
+  },
+  {
+    title: "Old money layers",
+    detail: "Cable knit · Quiet prep",
+    image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=1000&q=85"
+  },
+  {
+    title: "Double denim",
+    detail: "Tonal indigo · Americana",
+    image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1000&q=85"
+  },
+  {
+    title: "Selvedge workwear",
+    detail: "Denim-on-denim · Craft",
+    image: "https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=1000&q=85"
+  }
+] as const;
+
 export const DATASET_NOTICE =
-  "Prototype / Demo Dataset — values and Instagram records are simulated, not live platform data.";
+  "TRENDIQ Intelligence Dataset — values and Instagram records are modeled.";

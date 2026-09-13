@@ -619,6 +619,66 @@ export const TREND_SEEDS: TrendSeed[] = [
       consumer: { early: 38, mid: 52, late: 72 },
       engagement: { early: 33, mid: 47, late: 68 }
     }
+  },
+  {
+    slug: "old-money-prep",
+    name: "Old Money Prep",
+    gender: "Menswear",
+    category: "Aesthetic",
+    colorFamily: "Navy",
+    garmentType: "Layering",
+    material: "Cashmere and cotton",
+    aesthetic: "Old money",
+    summary: "Cable knits, relaxed tailoring, and heirloom accessories are shaping a polished, understated menswear mood.",
+    seed: 341,
+    instagram: { early: 35, mid: 52, late: 81, postCount: 21840, engagementRate: 5.8, topHashtag: "#oldmoneystyle" },
+    signals: {
+      search: { early: 39, mid: 54, late: 80 },
+      social: { early: 37, mid: 56, late: 84 },
+      products: { early: 42, mid: 55, late: 77 },
+      consumer: { early: 43, mid: 57, late: 79 },
+      engagement: { early: 38, mid: 53, late: 75 }
+    }
+  },
+  {
+    slug: "double-denim",
+    name: "Double Denim",
+    gender: "Unisex",
+    category: "Aesthetic",
+    colorFamily: "Indigo",
+    garmentType: "Denim",
+    material: "Rigid cotton denim",
+    aesthetic: "Modern Americana",
+    summary: "Coordinated denim jackets and jeans are returning with cleaner washes, sharper proportions, and tonal styling.",
+    seed: 351,
+    instagram: { early: 33, mid: 50, late: 79, postCount: 20160, engagementRate: 5.5, topHashtag: "#doubledenim" },
+    signals: {
+      search: { early: 37, mid: 51, late: 76 },
+      social: { early: 34, mid: 53, late: 82 },
+      products: { early: 39, mid: 51, late: 73 },
+      consumer: { early: 41, mid: 54, late: 75 },
+      engagement: { early: 35, mid: 49, late: 71 }
+    }
+  },
+  {
+    slug: "denim-on-denim",
+    name: "Denim-on-Denim",
+    gender: "Unisex",
+    category: "Garment",
+    colorFamily: "Deep Indigo",
+    garmentType: "Denim",
+    material: "Selvedge denim",
+    aesthetic: "Craft workwear",
+    summary: "Head-to-toe indigo is being refined through selvedge texture, tonal contrast, and workwear-inspired layering.",
+    seed: 361,
+    instagram: { early: 30, mid: 47, late: 73, postCount: 17380, engagementRate: 5.0, topHashtag: "#denimondenim" },
+    signals: {
+      search: { early: 33, mid: 47, late: 70 },
+      social: { early: 31, mid: 49, late: 77 },
+      products: { early: 36, mid: 48, late: 67 },
+      consumer: { early: 38, mid: 50, late: 70 },
+      engagement: { early: 32, mid: 46, late: 66 }
+    }
   }
 ];
 
