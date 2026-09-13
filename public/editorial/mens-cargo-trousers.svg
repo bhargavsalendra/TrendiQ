@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c8c1a7"/><stop offset="1" stop-color="#555c4d"/></linearGradient></defs>
+  <rect width="900" height="1100" fill="url(#bg)"/>
+  <circle cx="450" cy="166" r="84" fill="#8c604c"/>
+  <path d="M370 245h170l80 210-45 82-65-120-20 205 48 410H410l-34-410-58 410H180l58-410-48-205z" fill="#59634d"/>
+  <path d="M385 395h145v555H385z" fill="#6f7656"/>
+  <path d="M274 470l92 28-5 148-125-18zM535 470l93 28 26 158-125-18z" fill="#7d855f" stroke="#343d31" stroke-width="8"/>
+  <path d="M450 252v174M362 285l-80 210M538 285l86 210" stroke="#30392d" stroke-width="26"/>
+  <text x="54" y="1020" fill="#fff" font-family="Arial" font-size="30" letter-spacing="5">TRENDIQ / UTILITY STUDY</text>
+</svg>
