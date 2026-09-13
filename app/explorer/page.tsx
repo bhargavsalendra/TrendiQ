@@ -40,9 +40,14 @@ export default function ExplorerPage() {
 
   const results = trends.filter((t) => {
     const q = filters.q.toLowerCase();
-    const last = t.series[t.series.length - 1]?.date ?? "";
+    const matchesDateRange = t.series.some((point) => {
+      const date = point.date;
+      return (!filters.from || date >= filters.from) && (!filters.to || date <= filters.to);
+    });
     return (
-      (!q || t.name.toLowerCase().includes(q) || t.category.toLowerCase().includes(q)) &&
+      (!q ||
+        [t.name, t.category, t.gender, t.colorFamily, t.garmentType, t.material, t.aesthetic]
+          .some((field) => field.toLowerCase().includes(q))) &&
       (filters.category === "All" || t.category === filters.category) &&
       (filters.gender === "All" || t.gender === filters.gender) &&
       (filters.color === "All" || t.colorFamily === filters.color) &&
@@ -50,10 +55,17 @@ export default function ExplorerPage() {
       (filters.material === "All" || t.material === filters.material) &&
       (filters.aesthetic === "All" || t.aesthetic === filters.aesthetic) &&
       (filters.status === "All" || t.displayStatus === filters.status) &&
-      (!filters.from || last >= filters.from) &&
-      (!filters.to || last <= filters.to)
+      matchesDateRange
     );
   });
+
+  const hasFilters = Object.values(filters).some((value) => value !== "" && value !== "All");
+
+  function clearFilters() {
+    setLoading(true);
+    setFilters(emptyFilters);
+    window.setTimeout(() => setLoading(false), 180);
+  }
 
   function update<K extends keyof typeof emptyFilters>(key: K, value: string) {
     setLoading(true);
@@ -65,7 +77,7 @@ export default function ExplorerPage() {
     <div>
       <DemoBanner />
       <h1 className="font-serif text-4xl">Trend Explorer</h1>
-      <p className="mt-2 text-muted">Search and filter the prototype catalog, then open any trend for evidence-backed analysis.</p>
+      <p className="mt-2 text-muted">Search and filter the TRENDIQ catalog, then open any trend for evidence-backed analysis.</p>
 
       <div className="mt-6 grid gap-3 rounded-2xl border border-line bg-white p-4 shadow-soft md:grid-cols-4">
         <input
@@ -89,6 +101,18 @@ export default function ExplorerPage() {
           To
           <input type="date" className="mt-1 w-full rounded-xl border border-line px-3 py-2 text-sm" value={filters.to} onChange={(e) => update("to", e.target.value)} />
         </label>
+        <div className="flex items-end gap-3">
+          <p className="pb-2 text-xs text-muted">{results.length} of {trends.length} trends</p>
+          {hasFilters ? (
+            <button
+              type="button"
+              className="rounded-xl border border-line px-3 py-2 text-xs text-muted hover:bg-paper"
+              onClick={clearFilters}
+            >
+              Clear filters
+            </button>
+          ) : null}
+        </div>
       </div>
 
       {loading ? (
